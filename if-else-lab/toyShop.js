@@ -8,8 +8,8 @@ function excursion(priceTrip, puzzlesCount, dollsCount, bearsCount, minionsCount
     let countTotal = Number(puzzlesCount) + Number(dollsCount) + Number(bearsCount) + Number(minionsCount) + Number(tracksCount);
     let profit = Number(puzzlesCount) * Number(puzzlePrice) + Number(dollPrice) * Number(dollsCount) + Number(bearsCount) * Number(bearPrice) + Number(minionPrice) * Number(minionsCount) + Number(tracksCount) * Number(trackPrice);
     if (countTotal >= 50) {
-        sumLeft = profit - profit * .25;
-        sumLeft = sumLeft - sumLeft * .1;
+        sumLeft -= profit * .25;
+        sumLeft -= sumLeft * .1;
         if (sumLeft >= priceTrip) {
             console.log(`Yes! ${(sumLeft - priceTrip).toFixed(2)} lv left.`);
         } else {
