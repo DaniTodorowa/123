@@ -1,5 +1,5 @@
 function solve(){
-    let name = "Teo"
+    let name = "Hello SoftUni"
     console.log(name)
 }
 
