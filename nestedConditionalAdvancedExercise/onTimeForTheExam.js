@@ -5,7 +5,7 @@ function solve(input){
     let minArrived = Number(input[3]);
     let tlMinExam = hourExam*60 + minExam;
     let tlMinArrived = hourArrived * 60 + minArrived;
-    let diffMin = Number((tlMinArrived - tlMinExam)%60);
+    //let diffMin = Number((tlMinArrived - tlMinExam)%60);
 
     if (tlMinExam === tlMinArrived) {
         console.log(`On time`);
