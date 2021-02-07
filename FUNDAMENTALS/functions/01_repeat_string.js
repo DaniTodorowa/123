@@ -3,10 +3,10 @@ function solve(str, n) {
     for (let i =1; i<=n;i++){
         newStr+= str;
     }
-    return newStr
+    return newStr;
 
 }
 
 
-const result = solve('abc', 3)
-console.log(result);
+let newStr = solve('ab', 2)
+console.log(newStr);
