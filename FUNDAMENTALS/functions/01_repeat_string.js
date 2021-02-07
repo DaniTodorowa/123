@@ -1,12 +1,12 @@
 function solve(str, n) {
-    let newStr = '';
+    let result = '';
     for (let i =1; i<=n;i++){
-        newStr+= str;
+        result+= str;
     }
-    return newStr;
+    return result;
 
 }
 
 
-let newStr = solve('ab', 2)
-console.log(newStr);
+let result = solve('abc', 2)
+console.log(result);
