@@ -1,14 +1,19 @@
-function solve(firstName, lastName, age) {
-    let person = {};
-    person.firstName = firstName;
-    person.lastName = lastName;
-    person.age = Number(age);
+function solve(input) {
+    let person = {
+        firstName: input.shift(),
+
+    };
+    person.lastName = input.shift();
+    person['age'] = input.shift();
+    //console.log(person);
+
     for (let key in person){
         console.log(`${key}: ${person[key]}`);
     }
+
 }
 
-solve("Peter",
-    "Pan",
-    "20"
+solve(['Peter',
+    'Pan',
+    '20']
 )
