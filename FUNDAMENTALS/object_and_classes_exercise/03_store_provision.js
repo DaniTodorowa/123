@@ -22,7 +22,8 @@ function solve(stock, ordered) {
 
     }
     //console.log(products);
-    for (const prod in products){
+    for (const prod in products){ //or const prod of Object.keys(products)
+
         console.log(`${prod} -> ${products[prod]}`);
     }
 }
