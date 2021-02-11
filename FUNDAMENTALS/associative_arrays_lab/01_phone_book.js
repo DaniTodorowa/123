@@ -1,6 +1,8 @@
 function solve(input) {
+
     let phone_book = {};
     for (const line of input){
+
         let [name, phone] = line.split(' ');
         phone_book[name] = phone;
     }
