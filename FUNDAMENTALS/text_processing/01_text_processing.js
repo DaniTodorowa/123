@@ -1,7 +1,5 @@
 function solve(input) {
-    for (let ch of input){
-        console.log(ch);
-    }
+    input.split('').forEach(ch=> console.log(ch));
 }
 
 solve('AWord')
