@@ -13,8 +13,9 @@ function solve(input) {
     console.log('Bought furniture:');
     if (boughtFurniture.length>0) {
         console.log(boughtFurniture.join('\n'));
-        console.log(`Total money spend: ${totalMoneySpend.toFixed(2)}`);
+
     }
+    console.log(`Total money spend: ${totalMoneySpend.toFixed(2)}`);
 
 }
 
