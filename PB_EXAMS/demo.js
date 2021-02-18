@@ -1,74 +1,32 @@
-function solve(input){
-    let quantity = Number(input.shift());
-    let command = input.shift();
-    let sold = 0;
-    let isSold = false;
-    while (true){
-
-        if (command === 'Close'){
-            break;
-
-        }else {
-            let currentQuantity = Number(input.shift());
-            if (command ==="Buy"){
-                if (currentQuantity>quantity){
-                    console.log("Not enough eggs in store!");
-                    console.log(`You can buy only ${quantity}.`);
-                    isSold = true;
-                    break;
-                }else {
-                    quantity-=currentQuantity;
-                    sold+=currentQuantity;
-                }
-            }else if (command === 'Fill'){
-                quantity+=currentQuantity;
-
-            }
-        }
-        command = input.shift();
-    }
-    if (!isSold){
-        console.log('Store is closed!');
-        console.log(`${sold} eggs sold.`);
-    }
-
-}
-
-solve([
-
-        '20', 'Fill',
-        '30', 'Buy',
-        '15', 'Buy',
-        '20', 'Close'
-    ]
-)
-
-//second solving
 function solve(input) {
-    let eggs = Number(input.shift());
+    let budget = Number(input.shift());
+    let counter = 0;
+    let bought = 0;
     let data = input.shift();
-    let areFin = false;
-    let sold = 0;
-    while (data!=="Close"){
-        let currEggs = Number(input.shift());
-        if (data ==="Fill"){
-            eggs+=currEggs;
-        }else if (data==="Buy"){
-            if(eggs>=currEggs){
-                eggs-=currEggs;
-                sold += currEggs;
-            }else {
-                areFin = true;
-                break;
-            }
+    let areEnough = true;
+    while (data!=="Stop"){
+        let currPrice = Number(input.shift());
+        counter++
+        if (counter%3===0){
+            currPrice = currPrice*.5;
+        }
+        if (currPrice>budget){
+            console.log(`You don't have enough money!`);
+            console.log(`You need ${(currPrice-budget).toFixed(2)} leva!`);
+            areEnough = false;
+            break;
+        }else {
+            budget-=currPrice;
+            bought +=currPrice;
         }
         data = input.shift();
     }
-    if (!areFin){
-        console.log(`Store is closed!`);
-        console.log(`${sold} eggs sold.`);
-    }else {
-        console.log(`Not enough eggs in store!`);
-        console.log(`You can buy only ${eggs}.`);
+    if(areEnough){
+        console.log(`You bought ${counter} products for ${bought.toFixed(2)} leva.`);
     }
 }
+
+solve([
+     '54', 'Thermal underwear', '24', 'Sunscreen', '45' ]
+
+)
