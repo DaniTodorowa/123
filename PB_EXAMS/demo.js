@@ -1,32 +1,43 @@
 function solve(input) {
-    let budget = Number(input.shift());
-    let counter = 0;
-    let bought = 0;
-    let data = input.shift();
-    let areEnough = true;
-    while (data!=="Stop"){
-        let currPrice = Number(input.shift());
-        counter++
-        if (counter%3===0){
-            currPrice = currPrice*.5;
-        }
-        if (currPrice>budget){
-            console.log(`You don't have enough money!`);
-            console.log(`You need ${(currPrice-budget).toFixed(2)} leva!`);
-            areEnough = false;
-            break;
+    let capacity = Number(input.shift());
+    let data =(input.shift());
+    let profit = 0;
+    let isFull = false;
+    let tlCount = 0;
+    while (data!== "Movie time!"){
+        let currentEntry = Number(data);
+        if (capacity>=currentEntry){
+            capacity-= currentEntry;
+            tlCount += currentEntry;
+            let currSum = 5* currentEntry;
+            if (currentEntry % 3 ===0){
+
+                profit += currSum - 5;
+            }else {
+                profit += currSum;
+            }
+
         }else {
-            budget-=currPrice;
-            bought +=currPrice;
+                isFull = true;
+                break;
         }
         data = input.shift();
     }
-    if(areEnough){
-        console.log(`You bought ${counter} products for ${bought.toFixed(2)} leva.`);
+    if(isFull){
+        console.log("The cinema is full.");
+
+    }else {
+        console.log(`There are ${capacity} seats left in the cinema.`);
     }
+    console.log(`Cinema income - ${profit} lv.`);
 }
 
 solve([
-     '54', 'Thermal underwear', '24', 'Sunscreen', '45' ]
+    '50',
+    '15',
+    '10',
+    '10',
+    '15',
+    '5'
 
-)
+])
