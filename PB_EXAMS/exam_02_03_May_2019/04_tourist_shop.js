@@ -1,38 +1,32 @@
 function solve(input) {
     let budget = Number(input.shift());
-
     let counter = 0;
-    let isEnough = false;
-    let purchase = 0;
-    let command = input.shift();
-    while (true){
-        //let command = input.shift();
-        if (command === 'Stop'){
-            break;
-
-        }else {
-            let currSum = Number(input.shift());
-            if (currSum > budget){
-                isEnough = true;
-                console.log("You don't have enough money!");
-                console.log(`You need ${(currSum - budget).toFixed(2)} leva!`);
-                break;
-            } else {
-                counter++;
-                if (counter%3===0){
-                    currSum -= currSum*.5
-
-                }
-                purchase+=currSum;
-                budget-= currSum;
-
-            }
-            command = input.shift();
+    let bought = 0;
+    let data = input.shift();
+    let areEnough = true;
+    while (data!=="Stop"){
+        let currPrice = Number(input.shift());
+        counter++
+        if (counter%3===0){
+            currPrice = currPrice*.5;
         }
+        if (currPrice>budget){
+            console.log(`You don't have enough money!`);
+            console.log(`You need ${(currPrice-budget).toFixed(2)} leva!`);
+            areEnough = false;
+            break;
+        }else {
+            budget-=currPrice;
+            bought +=currPrice;
+        }
+        data = input.shift();
     }
-    if (! isEnough){
-        console.log(`You bought ${counter} products for ${purchase.toFixed(2)} leva.`);
+    if(areEnough){
+        console.log(`You bought ${counter} products for ${bought.toFixed(2)} leva.`);
     }
 }
 
-solve([54,'Backpack',.5,"Stop"])
+solve([
+    '54', 'Thermal underwear', '24', 'Sunscreen', '45' ]
+
+)
