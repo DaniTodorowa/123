@@ -1,7 +1,9 @@
-function solve(input) {
+function solve(...input) {
+    //console.log(typeof input);
     let city = {};
     city.name = input.shift();
     city.area = input.shift();
+    city.population = input.shift();
     city.country = input.shift();
     city.postCode = input.shift();
     //console.log(city);
@@ -10,4 +12,4 @@ function solve(input) {
     }
 }
 
-solve(["Sofia"," 492", "1238438", "Bulgaria", "1000"])
+solve("Sofia"," 492", "1238438", "Bulgaria", "1000")

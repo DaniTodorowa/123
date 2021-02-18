@@ -1,19 +1,20 @@
-function solve(input) {
+function solve(firstName, lastName, age) {
     let person = {
-        firstName: input.shift(),
+        firstName: firstName,
 
     };
-    person.lastName = input.shift();
-    person['age'] = input.shift();
+    person.lastName = lastName;
+    person['age'] = age;
     //console.log(person);
 
     for (let key in person){
+
         console.log(`${key}: ${person[key]}`);
     }
 
 }
 
-solve(['Peter',
+solve('Peter',
     'Pan',
-    '20']
+    '20'
 )

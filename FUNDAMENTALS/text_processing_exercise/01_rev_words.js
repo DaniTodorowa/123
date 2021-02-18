@@ -10,4 +10,3 @@ solve('great, learning',
     'softuni is ***** place for ******** new programming languages'
 
 )
-

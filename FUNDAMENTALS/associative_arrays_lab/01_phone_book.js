@@ -10,6 +10,11 @@ function solve(input) {
     Object.keys(phone_book).forEach(key=> {
         console.log(`${key} -> ${phone_book[key]}`);
     })
+    if (phone_book.hasOwnProperty('Tim')){
+        console.log('YES');
+    }else {
+        console.log('NO');
+    }
 
 }
 
