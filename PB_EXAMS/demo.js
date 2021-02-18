@@ -1,48 +1,37 @@
 function solve(input) {
-    let firstEggs = Number(input.shift());
-    let secEggs = Number(input.shift());
+    let eggs = Number(input.shift());
     let data = input.shift();
-    let winner = "";
-    let isWinner = false;
-    while (data!== "End of battle" && data !==""){
-
-        if (data==='one'){
-            secEggs--;
-            if (secEggs ===0){
-                winner = 'Player one';
-                isWinner = true;
-                break;
-            }
-        }else {
-            firstEggs --;
-            if(firstEggs===0){
-                winner = "Player two";
-                isWinner = true;
+    let areFin = false;
+    let sold = 0;
+    while (data!=="Close"){
+        let currEggs = Number(input.shift());
+        if (data ==="Fill"){
+            eggs+=currEggs;
+        }else if (data==="Buy"){
+            if(eggs>=currEggs){
+                eggs-=currEggs;
+                sold += currEggs;
+            }else {
+                areFin = true;
                 break;
             }
         }
         data = input.shift();
     }
-    if (isWinner){
-        if (winner === 'Player two'){
-            console.log(`Player one is out of eggs. Player two has ${secEggs} eggs left.`);
-        }else {
-            console.log(`Player two is out of eggs. Player one has ${firstEggs} eggs left.`);
-        }
+    if (!areFin){
+        console.log(`Store is closed!`);
+        console.log(`${sold} eggs sold.`);
     }else {
-        console.log(`Player one has ${firstEggs} eggs left.`);
-        console.log(`Player two has ${secEggs} eggs left.`);
+        console.log(`Not enough eggs in store!`);
+        console.log(`You can buy only ${eggs}.`);
     }
-
-
 }
 
 solve([
 
-        '6',   '3',   'one',
-        'two', 'two', 'one',
-        'one', '',    '',
-        '',    ''
+        '20', 'Fill',
+        '30', 'Buy',
+        '15', 'Buy',
+        '20', 'Close'
     ]
-
 )
