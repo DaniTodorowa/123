@@ -6,6 +6,8 @@ function solve(input) {
     let result = 'Password is valid';
     let countDig = 0;
 
+
+
     function isDigit(a) {
 
         return (Number(a) >= 0 && Number(a) <= 9)
@@ -41,6 +43,7 @@ function solve(input) {
     if (countDig <2){
         console.log('Password must have at least 2 digits');
     }
+    //res = isConsistAtLeast2digits && isOnlyLettersDigits && isBw6and10;                why not?!!
     if (isConsistAtLeast2digits && isOnlyLettersDigits && isBw6and10){
         console.log(result);
     }
