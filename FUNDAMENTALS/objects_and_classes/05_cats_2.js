@@ -10,12 +10,12 @@ function solve(input) {
         }
     }
 
-    let cats = input.map(x => {
+    input.map(x => {
         let [name, ageText] = x.split(" ");
         let cat = new Cat(name, Number(ageText));
         return cat;
-    })
-    cats.forEach(x => x.meow());
+    }).forEach(x => x.meow()); // chaining
+
 }
 
-solve(['Mellow 2', 'Tom 5', 'Navcho 3'])
+solve(['Mellow 2', 'Tom 5'])
