@@ -15,7 +15,7 @@ function solve(input) {
     // for (let kvp of storage.entries()) {
     //     console.log(`${kvp[0]} -> ${kvp[1]}`);
     // }
-    storage.forEach((key,value)=> {
+    storage.forEach((value,key)=> {
         console.log(`${key} -> ${value}`);
     })
 }
