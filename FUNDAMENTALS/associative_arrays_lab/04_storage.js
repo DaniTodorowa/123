@@ -1,26 +1,20 @@
 function solve(input) {
     let storage = new Map();
-    input.forEach(line => {
-        let [item, quantity] = line.split(' ');
-        quantity = Number(quantity);
+    for (const line of input){
+        let [item, quantityText] = line.split(' ');
+        let quantity = Number(quantityText)
         if (storage.has(item)){
-            let oldQuantity = storage.get(item);
-            storage.set(item, oldQuantity + quantity);
-        }else {
-            storage.set(item,quantity);
+            let currentQuantity = storage.get(item);
+            quantity += currentQuantity;
         }
-
-    });
-    // for (const key of storage.keys()){
-    //     console.log(`${key} -> ${storage.get(key)}`);
+        storage.set(item,quantity);
+    }
+    // for (const [key, value] of storage){
+    //     console.log(`${key} -> ${value}`);
     // }
     for (let kvp of storage.entries()) {
         console.log(`${kvp[0]} -> ${kvp[1]}`);
     }
-
-
-
-
 }
 
 solve(['tomatoes 10',
