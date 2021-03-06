@@ -12,9 +12,12 @@ function solve(input) {
     // for (const [key, value] of storage){
     //     console.log(`${key} -> ${value}`);
     // }
-    for (let kvp of storage.entries()) {
-        console.log(`${kvp[0]} -> ${kvp[1]}`);
-    }
+    // for (let kvp of storage.entries()) {
+    //     console.log(`${kvp[0]} -> ${kvp[1]}`);
+    // }
+    storage.forEach((key,value)=> {
+        console.log(`${key} -> ${value}`);
+    })
 }
 
 solve(['tomatoes 10',
