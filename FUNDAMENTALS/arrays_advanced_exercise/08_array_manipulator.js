@@ -2,12 +2,12 @@ function solve(integers=[], commands=[]) {
     let currCommand = commands.shift();
 
     function add(arr,tokens){
-        arr.splice(tokens[0], 0, Number(tokens[1]))
+        arr.splice(+tokens[0], 0, (+tokens[1]))
         return arr;
     }
 
     function addMany(arr,tokens){
-        let index = tokens.shift();
+        let index = +tokens.shift();
         for(let value of tokens){
             arr.splice(index++,0,value);
         }
