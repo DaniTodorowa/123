@@ -7,7 +7,7 @@ function solve(input) {
         const items = tokens[2]
             .split(', ')
             .sort((a, b) => a.localeCompare(b));
-        heroes.push({name, level, items})
+        heroes.push({name, level, items});
     })
     heroes.sort((a, b) => a.level - b.level);
     heroes.forEach(hero => {
