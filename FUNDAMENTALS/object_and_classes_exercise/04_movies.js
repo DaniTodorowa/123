@@ -7,7 +7,8 @@ function solve(input) {
         const dateIndex = tokens.indexOf('onDate');
 
         if (addIndex > -1) {
-            movies.push({name: tokens.splice(addIndex + 1).join(' ')})
+            movies.push({name: tokens.splice(addIndex + 1).join(' ')});
+
         }
         if (directorIndex > -1) {
             const name = tokens.slice(0, directorIndex).join(' ');
