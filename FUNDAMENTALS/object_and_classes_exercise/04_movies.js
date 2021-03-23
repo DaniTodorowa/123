@@ -35,7 +35,7 @@ function solve(input) {
         if (movie.name !== undefined && movie.director !== undefined && movie.date !== undefined) {
             console.log(JSON.stringify(movie));
         }
-    })
+    });
 }
 
 solve(['addMovie Fast and Furious',
