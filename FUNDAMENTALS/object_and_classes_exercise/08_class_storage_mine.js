@@ -3,9 +3,7 @@ class Storage {
         this.capacity = capacity;
         this.storage = [];
 
-
     }
-
 
     addProduct(objProduct) {
         this.storage.push(objProduct);
