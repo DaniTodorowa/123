@@ -34,7 +34,9 @@ function solve(input) {
         return gradesSum / grades.length;
     }
 
-    console.log(sortedStudents);
+    for(let el of sortedStudents){
+        console.log(`${el[0]}: ${el[1].join(", ")}`);
+    }
 
 
 }
