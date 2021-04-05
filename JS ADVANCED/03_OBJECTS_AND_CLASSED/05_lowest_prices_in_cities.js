@@ -1,0 +1,22 @@
+function solve(array) {
+    // Mask - https://git.io/Jfo87
+    let products = new Map();
+    for (let line of array) {
+        let [town, product, price] = line.split(" | ");
+        if (!products.has(product)) {
+            products.set(product, new Map());
+        }
+        products.get(product).set(town, Number(price));
+    }
+    for (let [key, value] of products) {
+        let lowest = ([...value].reduce(function (a, b) {
+            if (a[1] < b[1]) {
+                return a;
+            } else if (a[1] > b[1]) {
+                return b;
+            }
+            return a;
+        }));
+        console.log(`${key} -> ${lowest[1]} (${lowest[0]})`);
+    }
+}
