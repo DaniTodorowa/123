@@ -3,7 +3,7 @@ function solve(input) {
     input.forEach(line => {
         let [name, level, items] = line.split(" / ");
         level = Number(level)
-        items = items.split(", ");
+        items = items ? items.split(", ") : [];
         heroes.push({name, level, items})
 
 
