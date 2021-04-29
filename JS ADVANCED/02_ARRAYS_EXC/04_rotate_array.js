@@ -1,24 +1,10 @@
-function solve(arr = []) {
-    let numRot = Number(arr.pop());
-    for (let i = 0; i < numRot; i++) {
-        arr.unshift(arr.pop());
-    }
+function rotateArr(x) {
+    let rotates = x.pop()
 
-    return (arr.join(" "));
+    for (let i = 0; i < rotates % x.length; i++)
+        x.unshift(x.pop())
+
+    console.log(x.join(' '))
 }
 
-
-
-
-
-
-
-solve(['1',
-    '2',
-    '3',
-    '4',
-    '2'
-
-
-
-])
+rotateArr(['1', '2', '3', '4', '2'])
