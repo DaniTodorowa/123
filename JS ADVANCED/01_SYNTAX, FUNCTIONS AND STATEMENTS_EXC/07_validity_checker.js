@@ -1,8 +1,8 @@
-function validityChecker(arr) {
-    let x1 = Number(arr[0]);
-    let y1 = Number(arr[1]);
-    let x2 = Number(arr[2]);
-    let y2 = Number(arr[3]);
+function validityChecker(a,b,c,d) {
+    let x1 = Number(a);
+    let y1 = Number(b);
+    let x2 = Number(c);
+    let y2 = Number(d);
 
     function distance(x1, y1, x2, y2) {
         let distH = x1 - x2;
@@ -29,7 +29,7 @@ function validityChecker(arr) {
     }
 }
 
-validityChecker([3, 0, 0, 4]);  // Expected Output:
+validityChecker(3, 0, 0, 4);  // Expected Output:
 // {3, 0} to {0, 0} is valid
 // {0, 4} to {0, 0} is valid
 // {3, 0} to {0, 4} is valid
