@@ -5,7 +5,7 @@ function solve(length, k) {
         let currSUm = currArr.reduce((a, c) => a + c, 0);
         res.push(currSUm)
     }
-    return (res);
+    return res;
 }
 
 solve(8, 2)
