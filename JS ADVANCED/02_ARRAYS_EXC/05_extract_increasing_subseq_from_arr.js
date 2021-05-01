@@ -4,7 +4,7 @@ function solve(array=[]) {
         let biggest = Math.max(...extracted);
         number >= biggest ? extracted.push(number) : 'pass';
     })
-    console.log(extracted.join('\n'));
+    return (extracted);
 }
 
 solve([1,
