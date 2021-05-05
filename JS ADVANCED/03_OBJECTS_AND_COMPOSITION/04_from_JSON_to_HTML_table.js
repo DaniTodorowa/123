@@ -1,5 +1,5 @@
 function solve(data) {
-    // Not mine solution... But this task is Stupid... - https://git.io/Jfo8Q
+let result = ''
     function escapeHtml(unsafe) {
         return unsafe.toString()
             .replace(/&/g, "&amp;")
@@ -10,7 +10,7 @@ function solve(data) {
     }
 
     const products = JSON.parse(data);
-    let result = `<table>\n   <tr>`
+     result = `<table>\n   <tr>`
 
     const keys = Object.keys(products[0]);
     result = keys.reduce((acc, key) => {
@@ -31,3 +31,8 @@ function solve(data) {
 
     return result += `</table>`;
 }
+
+console.log(solve(`[{"Name":"Stamat",
+"Score":5.5},
+{"Name":"Rumen",
+    "Score":6}]`));
