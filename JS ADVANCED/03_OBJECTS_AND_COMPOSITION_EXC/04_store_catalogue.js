@@ -2,6 +2,7 @@ function storeCatalogue(input) {
     // Mask - https://git.io/JfreS
     let catalogue = {};
     input.map(data => { catalogue[data.split(' : ')[0]] = Number(data.split(' : ')[1]); });
+    console.log(catalogue);
 
     let letter = '' // Here We will keep the current letter to Print...
 
@@ -20,3 +21,13 @@ function storeCatalogue(input) {
             console.log(`  ${product}: ${catalogue[product]}`);  // And Finally we will print the output line.
         });
 }
+storeCatalogue(['Appricot : 20.4',
+    'Fridge : 1500',
+    'TV : 1499',
+    'Deodorant : 10',
+    'Boiler : 300',
+    'Apple : 1.25',
+    'Anti-Bug Spray : 15',
+    'T-Shirt : 10'])
+
+
