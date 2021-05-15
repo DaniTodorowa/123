@@ -9,6 +9,6 @@ function  extractText(){
     let elements = document.querySelectorAll('li');
     let elementsText = Array.from(elements).map(e=>e.textContent);
    let result = document.getElementById('result');
-   result.textContent = elementsText.join('\n');
+   result.value = elementsText.join('\n');
 
 }
