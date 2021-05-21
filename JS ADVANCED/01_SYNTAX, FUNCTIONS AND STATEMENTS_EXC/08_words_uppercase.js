@@ -2,7 +2,7 @@ function solve(input) {
     //console.log(input);
     let result =[]
     let res = [];
-    let re = /\w+/g;
+    let re = /\w+/g; //???(/[\W]+/)
     let found = '';
     let arr = input.split(' ');
     arr.forEach(r=>{
