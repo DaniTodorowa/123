@@ -30,4 +30,16 @@ function solve(input) {
 //     console.log(result);         // 100 in Judge
 // }
 
-solve('hello')
+function words(str) {
+
+    let pattern = /\w+/g
+
+    let match = str.match(pattern)
+    let wordsUpperCase = []
+    for (let word of match) {
+        wordsUpperCase.push(word.toUpperCase())
+    }
+    console.log(wordsUpperCase.join(', '));
+}
+
+words('hello')
