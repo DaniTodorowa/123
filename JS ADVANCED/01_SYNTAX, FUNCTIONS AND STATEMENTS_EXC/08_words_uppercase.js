@@ -20,14 +20,15 @@ function solve(input) {
 }
 /*function wordUpperCase(input) {
     return input.toUpperCase().match(/\w+/gim).join(', ');
-}*/    //100-100 in Judge
+}*/                                                             //100-100 in Judge
+
 
 // function wordsUppercase(text) {
 //     let result = text.toUpperCase()
 //         .match(/\w+/g)
 //         .join(', ');
 //
-//     console.log(result);         // 100 in Judge
+//     console.log(result);                                          // 100 in Judge
 // }
 
 function words(str) {
@@ -52,5 +53,5 @@ words('hello')
 //             arr.push(el)
 //         }
 //     }
-//     console.log(arr.join(', '))
+//     console.log(arr.join(', '))                       100 in Judge
 // }
