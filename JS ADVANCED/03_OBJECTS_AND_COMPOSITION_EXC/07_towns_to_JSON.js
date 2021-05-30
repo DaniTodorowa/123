@@ -9,19 +9,13 @@ function solve(arr) {
 
         obj[Town]= data[0];
 
-
         obj[Latitude]= Number(Number(data[1]).toFixed(2));
 
         obj[Longitude]= Number(Number(data[2]).toFixed(2));
-       
+
         res.push(obj);
-
     }
-
     return JSON.stringify(res);
-
-
-
 }
 
 console.log(solve(['| Town | Latitude | Longitude |',
