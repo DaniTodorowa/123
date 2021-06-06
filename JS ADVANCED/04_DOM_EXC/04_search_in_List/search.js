@@ -17,3 +17,4 @@ function search() {
     result.textContent = `${sum} matches found`
 
 }
+

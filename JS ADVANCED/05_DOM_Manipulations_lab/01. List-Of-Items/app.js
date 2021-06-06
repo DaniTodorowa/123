@@ -18,3 +18,5 @@ function addItem() {
 //    itemsLiAll.appendChild(newLiEl);
 //
 // }
+
+
