@@ -12,3 +12,4 @@ function calc(){
     document.getElementById('sum').value= res;
 
 }
+
