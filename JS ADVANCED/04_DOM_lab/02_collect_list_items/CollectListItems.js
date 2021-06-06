@@ -5,10 +5,10 @@ function extractText() {
        textarea.value += node.textContent + "\n";
    }
 }
-function  extractText(){
-    let elements = document.querySelectorAll('li');
-    let elementsText = Array.from(elements).map(e=>e.textContent);
-   let result = document.getElementById('result');
-   result.value = elementsText.join('\n');
-
-}
+// function  extractText(){
+//     let elements = document.querySelectorAll('li');
+//     let elementsText = Array.from(elements).map(e=>e.textContent);
+//    let result = document.getElementById('result');
+//    result.value = elementsText.join('\n');
+//
+// }
