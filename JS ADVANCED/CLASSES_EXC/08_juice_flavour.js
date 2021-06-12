@@ -79,3 +79,38 @@ cappyJuice(['Kiwi => 234',
     'Watermelon => 6789']
 
 );
+
+// function solve(input) {
+//     let bottles = {};
+//     let juices = {};
+//     let result = "";
+//     for (let line of input) {
+//         let [juice, quantity] = line.split(' => ');
+//         if (!juices[juice]) {
+//             //bottles[juice] = 0;
+//             juices[juice]= 0;
+//             juices[juice] = Number(quantity);
+//
+//         }else {
+//             juices[juice] += Number(quantity);
+//
+//         }
+//         if (juices[juice] >= 1000) {
+//             let curBottleNum = Math.floor(juices[juice] / 1000);
+//             if(!bottles[juice]){
+//                 bottles[juice] = curBottleNum;
+//             }else {
+//                 bottles[juice] += curBottleNum;
+//             }
+//
+//             juices[juice] -= curBottleNum * 1000;
+//         }
+//
+//     }
+//     for(let [product, bottle] of Object.entries(bottles)){
+//         if(bottle>0){
+//             console.log(`${product} => ${bottle}`);
+//         }
+//
+//     }
+// }
