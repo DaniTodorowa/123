@@ -1,6 +1,6 @@
 function solve(arr, criteria) {
     function  splitLine(arr){
-        return arr.split("|")
+        return arr.split("|");
     }
 
     function convertToTicket([destination,price, status]) {
